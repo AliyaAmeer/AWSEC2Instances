@@ -9,6 +9,8 @@
     "auth_uri": "https://accounts.google.com/o/oauth2/auth",
     "token_uri": "https://oauth2.googleapis.com/token",
     "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/singtel-aws%40singtelpoc-372106.iam.gserviceaccount.com"
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/singtel-aws%40singtelpoc-372106.iam.gserviceaccount.com",
+    "aws_access_key_id" : "AKIA5HMXIFKSOP6NZ6YB",
+    "aws_secret_access_key" : "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"
   }
   

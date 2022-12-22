@@ -1,9 +1,13 @@
 import boto3
 import pandas as pd
+import json
+path_to_json = 'cred.json'
 
+with open(path_to_json, 'r') as f:
+    keys = json.load(f)
 # Fetch Instances along with their attributes using Describe Instance Types and filter them out
 def ec2_instance_types(region_name):
-    ec2 = boto3.client('ec2', region_name=region_name, aws_access_key_id='AKIA5HMXIFKSOP6NZ6YB', aws_secret_access_key='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')
+    ec2 = boto3.client('ec2', region_name=region_name, aws_access_key_id=keys['aws_access_key_id'], aws_secret_access_key=keys['aws_secret_access_key'])
     print('Start EC2 instance types Method')
     resultlist = []
     describe_result = ec2.describe_instance_types( InstanceTypes=['t2.nano', 't2.micro', 't2.small', 't2.medium', 't2.large', 't2.xlarge', 't2.2xlarge', 't3.nano', 't3.micro', 't3.small', 't3.medium', 't3.large', 't3.xlarge', 't3.2xlarge', 'm4.large', 'm4.xlarge', 'm4.2xlarge', 'm4.4xlarge', 'm4.10xlarge', 'm4.16xlarge'])

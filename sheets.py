@@ -10,8 +10,7 @@ def create():
         'title': 'EC2 Instances'
         }
     }
-    sheet = spreadsheet_service.spreadsheets().create(body=spreadsheet_details,
-                                    fields='spreadsheetId').execute()
+    sheet = spreadsheet_service.spreadsheets().create(body=spreadsheet_details,fields='spreadsheetId').execute()
     sheetId = sheet.get('spreadsheetId')
     print('Spreadsheet ID: {0}'.format(sheetId))
     permission1 = {
